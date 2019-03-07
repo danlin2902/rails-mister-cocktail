@@ -1,0 +1,22 @@
+<!-- <h1>Cocktails#index</h1>
+<p>Find me in app/views/cocktails/index.html.erb</p>
+ -->
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiEnvb-nfDgAhUFsaQKHe9VBLYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.svflow.nl%2Fen%2F2018%2F05%2F29%2Feja-cocktailworkshop%2F&psig=AOvVaw1LUEt1kZeiXxLrX9URdjKr&ust=1552055100797649);">
+  <div class="container">
+    <h1>"Cocktail Create"</h1>
+    <p>"The perfect place to build the perfect cocktail"</p>
+    <a <%= link_to "Create New Cocktail", new_cocktail_path, class: "btn btn-flat" %></a>
+  </div>
+</div>
+
+
+
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+      <p class="card-product-infos">
+      </p>
+      <%=  link_to cocktail.name, cocktail_path(cocktail)%>
+    </div>
+    <% end %>
